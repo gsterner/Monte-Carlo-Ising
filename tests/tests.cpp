@@ -1,10 +1,17 @@
 // tests.cpp
 #include "../utils.cpp"
+#include "../grid.cpp"
 #include <gtest/gtest.h>
   
 TEST(addTwoTest, oneAndTwo) {
     ASSERT_EQ(4, addTwo(2));
     ASSERT_EQ(3, addTwo(1));
+}
+
+TEST(GridTest, GridCreation) {
+  double matrix_data[] = {1,2,3,4};
+  Grid grid = Grid(matrix_data, 2, 2);
+  ASSERT_EQ(1, grid.at(0));
 }
  
 int main(int argc, char **argv) {

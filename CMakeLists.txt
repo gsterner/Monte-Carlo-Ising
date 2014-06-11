@@ -8,4 +8,4 @@ project(montecarloising)
 #add_definitions(-std=c99)
 
 
-add_executable(montecarloising main.cpp)
+add_executable(montecarloising main.cpp grid.cpp)
