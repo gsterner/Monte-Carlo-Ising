@@ -6,13 +6,14 @@ class Grid
 {
 
  private:
-  vector<double> data;
+  vector<double> data_;
   int number_rows_;
   int number_cols_;
   Grid() {};
 
  public:
   Grid(double *matrix_p, int rows, int cols);
+  Grid(vector<double> in_data, int rows, int cols);
 
   //  double at(int row, int col);
   double at(int rows);

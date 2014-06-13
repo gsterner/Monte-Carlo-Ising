@@ -14,12 +14,21 @@ Grid::Grid(double *matrix_p, int rows, int cols)
   int total_size = rows * cols;
 
   for (int i = 0; i < total_size; i++) {
-    data.push_back(matrix_p[i]);
+    data_.push_back(matrix_p[i]);
   }
 
-  std::cout << data[0] << std::endl;
+  std::cout << data_[0] << std::endl;
 }
 
+Grid::Grid(vector<double> in_data, int rows, int cols) {
+  number_rows_ = rows;
+  number_cols_ = cols;
+
+  data_ = in_data;
+  
+}
+
+
 double Grid::at(int index) {
-  return data.at(index);
+  return data_.at(index);
 }
