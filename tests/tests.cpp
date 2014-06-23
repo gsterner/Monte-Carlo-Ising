@@ -21,7 +21,8 @@ TEST(GridCreation, CreateGridWithArrayTest) {
 }
 
 TEST(GridCreation, CreateGridWithVectorTest) {
-  vector<double> matrix_data{1,2,3,4};
+  double matrix_data_array[] = {1,2,3,4};
+  vector<double> matrix_data(matrix_data_array, matrix_data_array + sizeof(matrix_data_array) / sizeof(int) );
   Grid grid = Grid(matrix_data, 2, 2);
   ASSERT_EQ(1, grid.at(0));
 }
